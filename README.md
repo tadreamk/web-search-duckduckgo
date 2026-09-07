@@ -2,9 +2,9 @@
 
 DuckDuckGo-backed `web_search` provider for DeepSeek Harness. No API key.
 
-## Install (from npm)
+Published on npm: [dsh-web-search-duckduckgo](https://www.npmjs.com/package/dsh-web-search-duckduckgo)
 
-After this package is published to npm:
+## Install
 
 ```sh
 dsh plugin --profile web add dsh-web-search-duckduckgo@latest
@@ -37,21 +37,15 @@ dsh plugin --profile web add .
 dsh plugin --profile web remove dsh-web-search-duckduckgo
 ```
 
-## Publish (maintainers)
+## Release (maintainers)
 
-So others can use the npm install command above:
-
-1. Push this folder to GitHub.
-2. Log in to npm: `npm login`
-3. From this folder, publish:
+Bump `version` in `package.json`, then from this folder:
 
 ```sh
 npm publish --access public
 ```
 
-4. Bump `version` in `package.json` for later releases, then publish again.
-
-Optional: add a GitHub Action that runs `npm publish` on tagged releases.
+Repo: [tadreamk/web-search-duckduckgo](https://github.com/tadreamk/web-search-duckduckgo)
 
 ## Config
 
