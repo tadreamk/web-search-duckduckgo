@@ -1,0 +1,16 @@
+# DuckDuckGo web-search provider for DSH.
+#
+# Install: open a terminal in this folder, then:
+#   dsh plugin --profile web add .
+# Restart `dsh web` after install.
+#
+# Pins the web seam onto this provider (replacing the base DeepSeek search pin).
+
+- id: web
+  config:
+    searchProvider: duckduckgo
+    fetchProvider: http
+
+- insert:
+    - id: web-search-duckduckgo
+      name: 'dsh-web-search-duckduckgo'
