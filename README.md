@@ -6,15 +6,21 @@ Published on npm: [dsh-web-search-duckduckgo](https://www.npmjs.com/package/dsh-
 
 ## Install
 
+If you run DSH with `npx`:
+
+```sh
+npx @deepseek-ai/dsh plugin --profile web add dsh-web-search-duckduckgo@latest
+npx @deepseek-ai/dsh web
+```
+
+If `dsh` is on your PATH (global install):
+
 ```sh
 dsh plugin --profile web add dsh-web-search-duckduckgo@latest
-```
-
-Restart:
-
-```sh
 dsh web
 ```
+
+`pnpm` must be on your PATH (the plugin command forwards to pnpm).
 
 Then ask the agent to search the web as usual.
 
@@ -26,12 +32,24 @@ This plugin has no native build scripts, so you do **not** need `pnpm approve-bu
 2. Run:
 
 ```sh
+npx @deepseek-ai/dsh plugin --profile web add .
+```
+
+Or with a global `dsh`:
+
+```sh
 dsh plugin --profile web add .
 ```
 
-3. Restart with `dsh web`.
+3. Restart with `npx @deepseek-ai/dsh web` or `dsh web`.
 
 ## Remove
+
+```sh
+npx @deepseek-ai/dsh plugin --profile web remove dsh-web-search-duckduckgo
+```
+
+Or with a global `dsh`:
 
 ```sh
 dsh plugin --profile web remove dsh-web-search-duckduckgo
