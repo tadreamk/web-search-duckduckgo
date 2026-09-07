@@ -14,6 +14,17 @@
     "README.md"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadreamk/web-search-duckduckgo.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "duckduckgo",
+    "web-search",
+    "plugin"
+  ],
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

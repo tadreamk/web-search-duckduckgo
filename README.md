@@ -1,17 +1,16 @@
 # DSH DuckDuckGo Web Search
 
-DuckDuckGo-backed `web_search` provider for DeepSeek Harness.
+DuckDuckGo-backed `web_search` provider for DeepSeek Harness. No API key.
 
-## Install
+## Install (from npm)
 
-1. Open a terminal in the `web-search-duckduckgo` folder (this repo’s root).
-2. Add the plugin:
+After this package is published to npm:
 
 ```sh
-dsh plugin --profile web add .
+dsh plugin --profile web add dsh-web-search-duckduckgo@latest
 ```
 
-3. Restart DSH:
+Restart:
 
 ```sh
 dsh web
@@ -19,11 +18,40 @@ dsh web
 
 Then ask the agent to search the web as usual.
 
+This plugin has no native build scripts, so you do **not** need `pnpm approve-builds` (that step is only for packages like `dsh-better-sidebar` that ship `node-pty`).
+
+## Install (from a local checkout)
+
+1. Open a terminal in this folder (`web-search-duckduckgo`).
+2. Run:
+
+```sh
+dsh plugin --profile web add .
+```
+
+3. Restart with `dsh web`.
+
 ## Remove
 
 ```sh
 dsh plugin --profile web remove dsh-web-search-duckduckgo
 ```
+
+## Publish (maintainers)
+
+So others can use the npm install command above:
+
+1. Push this folder to GitHub.
+2. Log in to npm: `npm login`
+3. From this folder, publish:
+
+```sh
+npm publish --access public
+```
+
+4. Bump `version` in `package.json` for later releases, then publish again.
+
+Optional: add a GitHub Action that runs `npm publish` on tagged releases.
 
 ## Config
 
@@ -35,4 +63,3 @@ dsh plugin --profile web remove dsh-web-search-duckduckgo
 
 - Uses DuckDuckGo’s public HTML results page (not Instant Answer).
 - No API key or Settings credential is required.
-# web-search-duckduckgo
