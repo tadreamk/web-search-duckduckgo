@@ -1,6 +1,6 @@
 {
   "name": "dsh-web-search-duckduckgo",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "DSH plugin: DuckDuckGo-backed web search provider for ctx.web (no API key)",
   "type": "module",
   "main": "index.mjs",
